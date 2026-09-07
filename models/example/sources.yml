@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: Orders
+    database : MYDB
+    schema: MYSCHEMA
+    tables:
+      - name: ORDERS
+ 
