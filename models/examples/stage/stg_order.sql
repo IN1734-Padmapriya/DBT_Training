@@ -61,9 +61,19 @@ SELECT
         ELSE NULL
     END AS ship_date,
 
-    AMOUNT AS amount,
+    -- Clean AMOUNT
+    TRY_TO_DECIMAL(
+        REPLACE(REPLACE(amount, '$', ''), ',', '.'),
+        10,
+        2
+    ) AS amount,
 
-    DISCOUNT_PCT AS discount_pct,
+    -- Clean DISCOUNT_PCT
+    TRY_TO_DECIMAL(
+        REPLACE(discount_pct, '%', ''),
+        5,
+        2
+    ) AS discount_pct,
 
     INITCAP(TRIM(STATUS)) AS status,
 
