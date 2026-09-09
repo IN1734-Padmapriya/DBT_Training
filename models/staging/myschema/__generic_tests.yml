@@ -5,11 +5,34 @@ models:
         data_tests:
           - unique
           - not_null
-          
+
+      - name: departmentname
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - Cardiology
+                  - Neurology
+                  - Orthopedics
+                  - Pediatrics
+                  - Oncology
+                  - General Medicine
+                  - Dermatology
+                  - Psychiatry
+
   - name: stg_myschema__doctors
     columns:
       - name: doctorid
         data_tests:
-        - unique
-        - not_null
+          - unique
+          - not_null
+
+      - name: department
+        data_tests:
+          - relationships:
+              field: departmentname
+              to: "{{ ref('stg_myschema__departments') }}"
+          
+            
         
+
