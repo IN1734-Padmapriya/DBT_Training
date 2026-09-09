@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: myschema
+    tables:
+      - name: departments
+      - name: doctors
+      - name: fact_orders
+      - name: my_first_dbt_model
+      - name: orders
+      - name: stg_order

@@ -1,0 +1,15 @@
+models:
+  - name: stg_myschema__departments
+    columns:
+      - name: departmentid
+        data_tests:
+          - unique
+          - not_null
+          
+  - name: stg_myschema__doctors
+    columns:
+      - name: doctorid
+        data_tests:
+        - unique
+        - not_null
+        
