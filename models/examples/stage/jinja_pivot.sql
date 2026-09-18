@@ -5,12 +5,14 @@ with amt as (
 )
 ,pivoted as (
     select ORDER_ID,
-    {%set Categorys =['Electronics','Home','Sports','Grocery','Office']%}
+    {%-set Categorys =['Electronics','Home','Sports','Grocery','Office']-%}
 
     {% for category in Categorys %}
         sum(case when category ='{{category}}' then amount else 0 end) as {{category}}_amount
+        {%- if not loop.last -%}
+        ,{% endif %}
         
-    {% endfor %}
+    {%- endfor -%}
     from amt
     group by ORDER_ID
 )
