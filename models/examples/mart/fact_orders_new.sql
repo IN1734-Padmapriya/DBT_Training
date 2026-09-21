@@ -1,4 +1,8 @@
-{{ config(materialized='incremental') }}
+{{ config(
+    materialized='incremental',
+    incremental_strategy='merge',
+    unique_key='ORDER_ID'
+) }}
 
 SELECT
     ORDER_ID,
@@ -25,10 +29,8 @@ FROM {{ ref('stg_orders') }}
 
 {% if is_incremental() %}
 
-
-WHERE CREATED_AT > (
-    SELECT MAX(CREATED_AT)
+WHERE UPDATED_AT > (
+    SELECT MAX(UPDATED_AT)
     FROM {{ this }}
 )
-
 {% endif %}
