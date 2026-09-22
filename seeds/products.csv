@@ -1,0 +1,6 @@
+product_id,product_name,category,price,created_at,updated_at
+201,Laptop,Electronics,70000,2026-09-20,2026-09-20
+202,Office Chair,Furniture,12000,2026-09-20,2026-09-20
+203,Headphones,Electronics,5000,2026-09-20,2026-09-20
+204,Notebook,Stationery,200,2026-09-20,2026-09-20
+205,Mouse,Electronics,1500,2026-09-22,2026-09-22
