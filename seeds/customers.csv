@@ -1,0 +1,4 @@
+customer_id,customer_name,city,email,created_at,updated_at
+101,Priya,Bangalore,priya@gmail.com,2026-09-20,2026-09-22
+102,Rahul,Mumbai,rahul@gmail.com,2026-09-20,2026-09-20
+103,Anita,Delhi,anita@gmail.com,2026-09-20,2026-09-20
