@@ -1,0 +1,14 @@
+snapshots:
+  - name: products_snapshot
+
+    relation: ref('stg_products')
+
+    config:
+      unique_key: product_id
+      strategy: check
+
+      check_cols:
+        - product_id
+        - product_name
+        - category
+        - price
