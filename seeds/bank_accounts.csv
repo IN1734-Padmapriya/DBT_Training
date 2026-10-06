@@ -1,0 +1,6 @@
+account_id,customer_name,account_type,open_date,balance,status
+1001,Alice Johnson,Savings,2025-01-15,12500.75,Active
+1002,Bob Smith,Checking,2024-11-03,8450.20,Active
+1003,Carol Davis,Savings,2025-03-22,22340.10,Active
+1004,David Wilson,Checking,2023-08-10,1575.00,Dormant
+1005,Emma Brown,Savings,2026-02-01,30120.55,Active

@@ -1,0 +1,9 @@
+transaction_id,account_id,transaction_date,transaction_type,amount,description
+50001,1001,2026-10-01,Deposit,5000.00,Salary Credit
+50002,1001,2026-10-02,Withdrawal,1200.00,ATM Withdrawal
+50003,1002,2026-10-02,Transfer,750.50,Utility Payment
+50004,1003,2026-10-03,Deposit,2500.00,Cash Deposit
+50005,1005,2026-10-04,Transfer,1800.25,Online Purchase
+50006,1002,2026-10-05,Deposit,3200.00,Refund
+50007,1004,2026-10-05,Withdrawal,300.00,Branch Withdrawal
+50008,1003,2026-10-06,Transfer,950.00,Insurance Premium
