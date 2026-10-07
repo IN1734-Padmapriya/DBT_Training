@@ -11,6 +11,8 @@ with source as (
         md5(cast(account_id as varchar)) as account_sk,
         account_id,
         account_type,
+        balance,
+        status,
         open_date,
         created_at,
         current_timestamp() as updated_at,
@@ -21,7 +23,11 @@ with source as (
                 '|',
                 coalesce(account_type, ''),
                 '|',
-                coalesce(cast(open_date as varchar), '')
+                coalesce(cast(open_date as varchar), ''),
+                '|',
+                coalesce(cast(balance as varchar), ''),
+                '|',
+                coalesce(cast(status as varchar), '')
             )
         ) as hash_key
 
