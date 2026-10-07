@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+
+  - name: banking
+    tables:
+
+      - name: bank_accounts
+        columns:
+          - name: account_id
+            description: "Unique identifier for each bank account."
+            tests:
+              - not_null
+
+      - name: bank_transactions
+        columns:
+          - name: txn_id
+            description: "Unique identifier for each bank transaction."
+            tests:
+              - unique
+              - not_null
