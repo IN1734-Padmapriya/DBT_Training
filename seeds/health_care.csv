@@ -11,10 +11,10 @@ Jasmine Aguilar,82,Male,AB+,Asthma,2020-07-01,Daniel Ferguson,Sons Rich and, Cig
 Christopher Berg,58,Female,AB-,Cancer,2021-05-23,Heather Day,Padilla-Walker,UnitedHealthcare,19784.63106,249,Elective,2021-06-22,Paracetamol,Inconclusive
 Michelle Daniels,72,Male,O+,Cancer,2020-04-19,John Duncan,Schaefer-Porter,Medicare,12576.79561,394,Urgent,2020-04-22,Paracetamol,Normal
 Aaron Martinez,38,Female,A-,Hypertension,2023-08-13,Douglas Mayo,Lyons-Blair,Medicare,7999.58688,288,Urgent,2023-09-05,Lipitor,Inconclusive
-Connor Hansen,75,Female,A+,Diabetes,2019-12-12,Kenneth Fletcher,Powers Miller and Flores,Cigna,43282.28336,134,Emergency,2019-12-28,Penicillin,Abnormal
+Connor Hansen,75,Female,A+,Hypertension,2019-12-12,Kenneth Fletcher,Powers Miller and Flores,Cigna,43282.28336,134,Emergency,2019-12-28,Penicillin,Abnormal
 Robert Bauer,68,Female,AB+,Asthma,2020-05-22,Theresa Freeman,Rivera-Gutierrez,UnitedHealthcare,33207.70663,309,Urgent,2020-06-19,Lipitor,Normal
 Brooke Brady,44,Female,AB+,Cancer,2021-10-08,Roberta Stewart,Morris-Arellano,UnitedHealthcare,40701.59923,182,Urgent,2021-10-13,Paracetamol,Normal
-Mary Gamble,46,Female,AB-,Obesity,2023-01-01,Maria Dougherty,Cline-Williams,Blue Cross,12263.35743,465,Elective,2023-01-11,Aspirin,Inconclusive
+Mary Gamble,46,Female,AB-,Diabetes,2023-01-01,Maria Dougherty,Cline-Williams,Blue Cross,12263.35743,465,Elective,2023-01-11,Aspirin,Inconclusive
 Haley Perkins,63,Female,A+,Arthritis,2020-06-23,Erica Spencer,Cervantes-Wells,UnitedHealthcare,24499.84790,114,Elective,2020-07-14,Paracetamol,Normal
 Jamie Campbell,38,Male,AB-,Obesity,2020-03-08,Justin Kim,Torres and Harrison Jones,Cigna,17440.46544,449,Urgent,2020-04-02,Paracetamol,Abnormal
 Luke Burgess,34,Female,A-,Hypertension,2021-03-04,Justin Moore Jr.,Houston PLC,Blue Cross,18843.02302,260,Elective,2021-03-14,Aspirin,Abnormal
@@ -23,3 +23,4 @@ Timothy Burns,67,Female,A-,Asthma,2023-06-28,Krista Smith,Jones LLC,Blue Cross,4
 Christopher Bright,48,Male,B+,Asthma,2020-01-21,Gregory Smith,Williams-Davis,Aetna,17695.91162,295,Urgent,2020-02-09,Lipitor,Normal
 Kathryn Stewart,58,Female,O+,Arthritis,2022-05-12,Vanessa Newton,Clark-Mayo,Aetna,5998.10290,327,Urgent,2022-06-10,Lipitor,Inconclusive
 Darlene Thompson,59,Male,A+,Asthma,2021-08-02,Donna Martinez MD,and Sons Smith,Aetna,25250.05243,119,Urgent,2021-08-12,Lipitor,Inconclusive
+Paul henderson,34,Male,A+,Asthma,2015-05-20,Stephanie Kramer,Willson Group ,Medicare,33211.05243,109,Emergency,2020-06-08,Paracetamol,Inconclusive
