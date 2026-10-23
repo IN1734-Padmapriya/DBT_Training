@@ -1,0 +1,38 @@
+
+version: 2
+
+sources:
+  - name: healthcare
+    schema: MYSCHEMA
+    tables:
+      - name: patients
+        columns:
+          - name: PATIENT_ID
+            tests:
+              - not_null
+
+models:
+  - name: dim_patients
+    columns:
+      - name: PATIENT_SK
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_encounters
+    columns:
+      - name: ENCOUNTER_ID
+        tests:
+          - unique
+          - not_null
+
+      - name: STATUS
+        tests:
+          - accepted_values:
+              values: ['Admitted', 'Discharged', 'Readmitted', 'Progress']
+
+      - name: PATIENT_SK
+        tests:
+          - relationships:
+              to: ref('dim_patients')
+              field: PATIENT_SK

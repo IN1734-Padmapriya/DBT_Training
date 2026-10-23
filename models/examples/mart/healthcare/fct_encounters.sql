@@ -41,7 +41,7 @@ WITH source_data AS (
 
     FROM {{ ref('stg_encounters') }} AS enc
 
-    INNER JOIN {{ ref('dim_patient') }} AS p
+    INNER JOIN {{ ref('dim_patients') }} AS p
         ON UPPER(TRIM(enc.PATIENT_ID)) = p.PATIENT_ID
 
 )
