@@ -6,33 +6,86 @@ sources:
     schema: MYSCHEMA
     tables:
       - name: patients
+        description: "Contains patient source data."
         columns:
           - name: PATIENT_ID
+            description: "Unique ID of the patient."
             tests:
               - not_null
 
 models:
   - name: dim_patients
+    description: "Stores patient details."
     columns:
       - name: PATIENT_SK
+        description: "Unique surrogate key for each patient."
         tests:
           - unique
           - not_null
+
+      - name: PATIENT_ID
+        description: "Patient ID."
+
+      - name: FIRSTNAME
+        description: "Patient's first name."
+
+      - name: LASTNAME
+        description: "Patient's last name."
+
+      - name: GENDER
+        description: "Patient's gender."
+
+      - name: DOB
+        description: "Patient's date of birth."
+
+      - name: CREATED_AT
+        description: "Record creation timestamp."
+
+      - name: UPDATED_AT
+        description: "Last update timestamp."
+
+      - name: RECORD_HASH
+        description: "Hash used to detect patient changes."
 
   - name: fct_encounters
+    description: "Stores patient encounter details."
     columns:
+      - name: ENCOUNTER_SK
+        description: "Unique surrogate key for each encounter."
+
       - name: ENCOUNTER_ID
+        description: "Encounter ID."
         tests:
           - unique
           - not_null
 
-      - name: STATUS
-        tests:
-          - accepted_values:
-              values: ['Admitted', 'Discharged', 'Readmitted', 'Progress']
-
       - name: PATIENT_SK
+        description: "Surrogate key of the related patient."
         tests:
           - relationships:
               to: ref('dim_patients')
               field: PATIENT_SK
+
+      - name: ADMIT_DATE
+        description: "Patient admission date."
+
+      - name: DISCHARGE_DATE
+        description: "Patient discharge date."
+
+      - name: DIAGNOSIS_CODE
+        description: "Code for the patient's diagnosis."
+
+      - name: STATUS
+        description: "Current encounter status."
+        tests:
+          - accepted_values:
+              values: ['Admitted', 'Discharged', 'Readmitted', 'Progress']
+
+      - name: CREATED_AT
+        description: "Record creation timestamp."
+
+      - name: UPDATED_AT
+        description: "Last update timestamp."
+
+      - name: RECORD_HASH
+        description: "Hash used to detect encounter changes."
