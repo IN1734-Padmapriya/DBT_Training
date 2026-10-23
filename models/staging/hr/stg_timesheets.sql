@@ -13,4 +13,4 @@ SELECT
     hours::NUMBER(5,2) AS hours,
     LOWER(TRIM(billable_flag)) AS billable_flag,
     CURRENT_TIMESTAMP() AS created_at
-FROM {{ ref('hr_timesheets') }}
+FROM {{ ref('hr_timesheets') }} 
