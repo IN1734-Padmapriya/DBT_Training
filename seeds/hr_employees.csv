@@ -1,0 +1,11 @@
+employee_id,first_name,last_name,email,department_code,title,salary,hired_date
+E1001,Aarav,Sharma,aarav.sharma@example.com,ENG,Data Engineer,92000,2022-03-14
+E1002,Priya,Raman,priya.raman@example.com,HR,HR Specialist,68000,2021-07-19
+E1003,Daniel,Joseph,daniel.joseph@example.com,FIN,Financial Analyst,75000,2023-01-09
+E1004,Meera,Iyer,meera.iyer@example.com,ENG,Software Engineer,88000,2020-11-02
+E1005,Karthik,Nair,karthik.nair@example.com,OPS,Operations Analyst,71000,2022-09-26
+E1006,Sofia,Thomas,sofia.thomas@example.com,MKT,Marketing Coordinator,64000,2024-02-12
+E1007,Vikram,Patel,vikram.patel@example.com,FIN,Senior Accountant,81000,2019-05-20
+E1008,Ananya,Rao,ananya.rao@example.com,HR,Talent Acquisition Partner,73000,2023-08-07
+E1009,Noah,Wilson,noah.wilson@example.com,OPS,Project Coordinator,67000,2021-12-13
+E1010,Ishita,Menon,ishita.menon@example.com,MKT,Marketing Analyst,70000,2022-06-06

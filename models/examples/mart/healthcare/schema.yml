@@ -5,7 +5,7 @@ sources:
   - name: healthcare
     schema: MYSCHEMA
     tables:
-      - name: patients
+      - name: patients 
         description: "Contains patient source data."
         columns:
           - name: PATIENT_ID
