@@ -1,0 +1,97 @@
+
+version: 2
+
+models:
+  - name: dim_employee
+    description: >
+      Employee dimension containing historical versions of employee
+      records captured by the dbt snapshot. Each row represents one
+      version of an employee.
+
+    columns:
+      - name: employee_version_sk
+        description: "Surrogate key uniquely identifying an employee version."
+        tests:
+          - unique
+          - not_null
+
+      - name: employee_id
+        description: "Natural key identifying the employee in the HR source system."
+        tests:
+          - not_null
+
+      - name: first_name
+        description: "Employee's first name."
+
+      - name: last_name
+        description: "Employee's last name."
+
+      - name: email
+        description: "Employee's email address."
+
+      - name: department_code
+        description: "Code identifying the employee's department."
+
+      - name: title
+        description: "Employee's job title for this version of the record."
+
+      - name: salary
+        description: "Employee's salary for this version of the record."
+
+      - name: hired_date
+        description: "Date the employee was hired."
+
+      - name: dbt_valid_from
+        description: "Timestamp when this employee version became valid."
+
+      - name: dbt_valid_to
+        description: "Timestamp when this employee version stopped being valid; NULL for the current version."
+
+      - name: is_current
+        description: "Indicates whether this is the current employee version: Yes or No."
+
+  - name: fct_timesheets
+    description: >
+      Timesheet fact table containing employee work hours, project
+      details, billable status, and audit timestamps.
+
+    columns:
+      - name: timesheet_id
+        description: "Natural key uniquely identifying a timesheet record."
+        tests:
+          - unique
+          - not_null
+
+      - name: employee_id
+        description: "Natural key identifying the employee who recorded the timesheet."
+        tests:
+          - not_null
+
+      - name: employee_version_sk
+        description: "Foreign key linking the timesheet to the employee dimension version."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_employee')
+              field: employee_version_sk
+
+      - name: work_date
+        description: "Date on which the employee worked."
+
+      - name: project_code
+        description: "Code identifying the project associated with the timesheet."
+
+      - name: hours
+        description: "Number of hours recorded for the timesheet."
+
+      - name: billable_flag
+        description: "Indicates whether the recorded hours are billable."
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: created_at
+        description: "Timestamp when the timesheet record was initially created in the target model."
+
+      - name: updated_at
+        description: "Timestamp when the timesheet record was last inserted or updated by the model."

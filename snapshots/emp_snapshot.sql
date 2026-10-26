@@ -16,11 +16,9 @@ last_name,
 email,
 department_code,
 title,
-salary::NUMBER(10,2),
-hired_date,
-created_at
-from {{ref('hr_employees')}}
-
+salary,
+hired_date
+from {{ref('stg_employees')}}
 
 {%endsnapshot%}
 
