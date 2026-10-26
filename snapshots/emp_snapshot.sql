@@ -17,7 +17,7 @@ email,
 department_code,
 title,
 salary,
-hired_date
+hired_date 
 from {{ref('stg_employees')}}
 
 {%endsnapshot%}
